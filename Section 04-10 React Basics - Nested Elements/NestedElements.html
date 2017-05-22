@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+      <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+      <style>
+        .container {
+          color: royalblue;
+        }
+      </style>
+  </head>
+  <body>
+    <div id="react-app"></div>
+    <script>
+
+      var headerElement = React.createElement('h3',
+      {
+        id:'header-id',
+        key: 'header'
+      }, 'Hello React World!');
+
+      var paragraphElement = React.createElement('p',
+      {
+        key: 'paragraph'
+      }, 'Components, composition, virtual DOM, and so much more - hurrah!');
+
+      var reactFragment = [headerElement, paragraphElement];
+
+      var sectionElement = React.createElement('section',
+      {
+        className: 'container'
+      }, reactFragment);
+
+      ReactDOM.render(sectionElement, document.getElementById('react-app'));
+
+    </script>
+  </body>
+</html>
